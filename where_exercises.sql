@@ -61,7 +61,10 @@ select * from employees where hire_date like '199%' AND birth_date like '%12-25'
 
 select *
 from employees
-where last_name like '%q%' and last_name not like 'qu';
+where last_name like '%q%'
+  and last_name not like '%qu%';
 
 
+select concat(((((unix_timestamp() - unix_timestamp('1978-02-10'))/60)/ 60) /24)/365, ' years');
 
+select min(birth_date) from employees  limit 1;
